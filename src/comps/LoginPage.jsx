@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
 import './LoginPage.css'; 
+import { firebaseAuth } from './firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const fireBaseLogin  =  async (userMail , passWord)=> {
+        try{
+            await signInWithEmailAndPassword(firebaseAuth , userMail , passWord) ;
+            setIsLoggedIn(true) ;
+        }
+        catch(error){
+            alert('Invalid username or password');
+        }
+        
+  }
   const handleLogin = () => {
-    if (username === 'admin' && password === 'password') {
-      setIsLoggedIn(true);
-    } else {
-      alert('Invalid username or password');
-    }
+    fireBaseLogin(username , password) ;
+    // if (username === 'admin' && password === 'password') {
+    //   setIsLoggedIn(true);
+    // } else {
+    //   alert('Invalid username or password');
+    // }
   };
 
   const handleLogout = () => {
@@ -34,7 +47,7 @@ const LoginPage = () => {
           </center>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="UserMail"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
