@@ -1,15 +1,26 @@
+import React from 'react'
 import { useState } from 'react'
 import Header from "./comps/Header"
 import LoginPage from './comps/LoginPage'
-import Sky from "./assets/sky.jpg"
 import './App.css'
-
-function App() {
+import Dashboard from './comps/Dashboard';
+import FlightDetails from './comps/FlightDetails'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+function App(){
   return (
-    <div className='back'>
-      <Header/>
-      <center><LoginPage/></center>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<LoginPage/>}/>
+        <Route exact path="/dash" element={<Dashboard/>}/>
+        <Route exact path="/flite" element={<FlightDetails/>}/>
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   )
 }
 

@@ -1,0 +1,18 @@
+/* *{
+    background: rgb(2,10,23);
+} */
+*{
+    margin: 0;
+  }
+.dash-space{
+    /* background-color:rgb(212,0,124); */
+    border-radius:20px;
+    margin-top:20px;
+    margin-left:20px;
+    margin-right:20px;
+    display:flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    /* align-items: center; */
+    /* justify-content: space-between; */
+}

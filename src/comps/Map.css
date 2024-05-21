@@ -1,0 +1,37 @@
+*{
+  background-image: url('.src/assets/sky.jpg');
+}
+.InputContainer {
+    width: 210px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(99deg, rgba(212,0,124,0.5) 0%, rgba(45,135,253,0.5) 100%); ;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .input {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
+    
+  }
+.search-list{
+    padding-right: 50px;
+    list-style: none;
+    display: flex;
+}  
+.search-list>li{
+    padding: 15px;
+}
