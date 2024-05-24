@@ -12,7 +12,10 @@
     margin-right:20px;
     display:flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+    /* background-color:black; */
+    /* background-image: url('./src/assets/final.jpg'); */
+    background-position-x:center;
+	background-size:cover;
     /* align-items: center; */
     /* justify-content: space-between; */
 }

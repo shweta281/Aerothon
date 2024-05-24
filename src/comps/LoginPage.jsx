@@ -57,13 +57,13 @@ const LoginPage = () => {
                 <input
                   type="text"
                   placeholder="UserMail"
-                  value={username}
+                  defaultValue={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
                 <input
                   type="password"
                   placeholder="Password"
-                  value={password}
+                  defaultValue={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <p class="page-link">

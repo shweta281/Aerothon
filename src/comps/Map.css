@@ -1,13 +1,16 @@
 *{
-  background-image: url('.src/assets/sky.jpg');
+  /* background-image: url('.src/assets/sky.jpg'); */
+  /* background:black; */
 }
 .InputContainer {
+    padding-left:10px;
     width: 210px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(99deg, rgba(212,0,124,0.5) 0%, rgba(45,135,253,0.5) 100%); ;
+    /* background-color:black; */
+    /* background: linear-gradient(99deg, rgba(212,0,124,0.5) 0%, rgba(45,135,253,0.5) 100%); ; */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -18,7 +21,7 @@
     height: 40px;
     border: none;
     outline: none;
-    caret-color: rgb(255, 81, 0);
+    /* caret-color: rgb(255, 81, 0); */
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding-left: 15px;
@@ -31,7 +34,45 @@
     padding-right: 50px;
     list-style: none;
     display: flex;
+    padding-left:100px;
+    /* align-element:center; */
 }  
 .search-list>li{
     padding: 15px;
 }
+.map-container{
+  /* background-color:black; */
+}
+.map-button {
+  margin-top:5px;
+  margin-left:50px;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+ }
+ 
+ .map-button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+ }
+ 
+ @keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #05bada66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+ }

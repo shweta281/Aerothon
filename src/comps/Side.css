@@ -11,7 +11,13 @@
 }
 .ps-sidebar-container{
     height: 93vh !important; 
-    background: linear-gradient(99deg, rgba(212,0,124,1) 0%, rgba(45,135,253,1) 100%); !important;
+    /* background: linear-gradient(99deg, rgba(212,0,124,1) 0%, rgba(45,135,253,1) 100%); !important; */
+    background-image:url('./src/assets/final.jpg') !important;
+    background-position-x:center;
+	background-size:cover;
+    /* opacity: 0.7; */
+    /* background-color:black; */
+    /* background:black !important; */
     border-radius:20px;
     margin-left:0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -21,7 +27,7 @@
     padding: 0.8em 1.8em;
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     width:100%;
-    background-color:rgba(0, 0, 0, 0.2);
+    background-color:rgba(255, 255, 255, 0.2);
     margin-bottom:2px;
 }
 .ps-menu-button:hover.link-dash{

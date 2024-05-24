@@ -2,7 +2,7 @@ import './Map.css'
 
 export default function Map(){
     return (
-        <center >
+        <center className='map-container'>
             <ul className='search-list'>
                 <li>
                     <div class="InputContainer">
@@ -14,6 +14,12 @@ export default function Map(){
                         <input placeholder="Destination.." id="input" class="input" name="text" type="text"/>
                     </div>
                 </li>
+                <li>
+                    <div >
+                        <input placeholder="Destination.." class='map-button' name="text" type="submit"/>
+                    </div>
+                </li>
+
             </ul>
             <div className='map-class'>
                 {/* insert map comp here */}
