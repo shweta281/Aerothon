@@ -1,4 +1,5 @@
 import './Map.css'
+import MapContainer from './MapContainer'
 
 export default function Map(){
     return (
@@ -22,6 +23,7 @@ export default function Map(){
 
             </ul>
             <div className='map-class'>
+                <MapContainer/>
                 {/* insert map comp here */}
             </div>
         </center>

@@ -54,6 +54,7 @@
   font-family: inherit;
   font-size: 17px;
   padding: 0.6em 1.5em;
+  /* crusor:pointer; */
  }
  
  .map-button:hover {
@@ -61,6 +62,7 @@
   background-size: 200% auto;
   -webkit-animation: pulse 2s infinite;
   animation: pulse512 1.5s infinite;
+  cursor:pointer;
  }
  
  @keyframes pulse512 {
