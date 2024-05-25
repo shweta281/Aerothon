@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker, Polyline, InfoWindow } from '@react-google-maps/api';
 import './Map.css';
 
-const API_KEY = "AIzaSyBfZK2cawU8atROFlbffslnR8Eb0ZRRtLA";
+const API_KEY1 = "AIzaSyBfZK2cawU8atROFlbffslnR8Eb0ZRRtLA";
+const API_KEY2 = "4f95a1ab02491334fdeeb8932c1ddaf8";
 const url_1 = "https://api.openweathermap.org/data/2.5/weather?q=";
-const url_2 = `&appid=${API_KEY}`;
+const url_2 = `&appid=${API_KEY2}`;
+
 
 const colors = {
   "Clouds": "#778899", 
@@ -73,6 +75,7 @@ const Map = () => {
 
   const handleButtonClick = async () => {
     try {
+        
       const response1 = await fetch(url_1 + input1 + url_2);
       const data1 = await response1.json();
       const lt1 = data1?.coord?.lat;
@@ -91,7 +94,8 @@ const Map = () => {
       arr.unshift({ lat: lt1, lng: long1 });
 
       const newMarkers = await Promise.all(arr.map(async (position) => {
-        const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.lat}&lon=${position.lng}&appid=${API_KEY}&lang=en&units=metric`);
+        
+        const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.lat}&lon=${position.lng}&appid=${API_KEY2}&lang=en&units=metric`);
         const weatherData = await weatherResponse.json();
         const weatherCond = weatherData.weather[0].main;
         const weatherIcon = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
@@ -123,7 +127,7 @@ const Map = () => {
           <button className="map-button" onClick={handleButtonClick}>Fetch Weather and Plot</button>
         </div>
         <div className='map-box'>
-        <LoadScript googleMapsApiKey={API_KEY}>
+        <LoadScript googleMapsApiKey={API_KEY1}>
           <GoogleMap
             className="map-box"
             mapContainerStyle={{ height: '70vh', width: '100%' }}
