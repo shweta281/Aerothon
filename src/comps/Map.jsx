@@ -75,13 +75,15 @@ const Map = () => {
     try {
       const response1 = await fetch(url_1 + input1 + url_2);
       const data1 = await response1.json();
-      const lt1 = data1.coord.lat;
-      const long1 = data1.coord.lon;
+      const lt1 = data1?.coord?.lat;
+      const long1 = data1?.coord?.lon;
 
       const response2 = await fetch(url_1 + input2 + url_2);
       const data2 = await response2.json();
-      const lt2 = data2.coord.lat;
-      const long2 = data2.coord.lon;
+      const lt2 = data2?.coord?.lat;
+      const long2 = data2?.coord?.lon;
+
+      if (!(lt1 && lt2 && long1 && long2)) throw new Error("DATA NOT FETCHED: longitude latitude not found!")
 
       let arr = [];
       midpoint(lt1, long1, lt2, long2, 4, arr);

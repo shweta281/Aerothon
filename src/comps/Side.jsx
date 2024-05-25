@@ -13,7 +13,7 @@ export default function Side(){
             <MenuItem> Line charts </MenuItem>
           </SubMenu> */}
           <MenuItem ><Link to="/dash" className={'link-map'}><FaMapMarkedAlt className='icon'/>  Map</Link></MenuItem>
-          <MenuItem><Link to="/flite" className={'link-flight'}><MdFlight className='icon'/> Flight Details</Link></MenuItem>
+          <MenuItem><Link to="/flite" className={'link-flight'}><MdFlight className='icon'/> Airport Details</Link></MenuItem>
         </Menu>
       </Sidebar>
   )
