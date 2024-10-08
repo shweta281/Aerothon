@@ -15,7 +15,7 @@ const FlightDetails = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const url = `https://applications.icao.int/dataservices/api/doc7910?api_key=45f14a4b-fae7-4fa6-aa11-17ed20b6b96c&airports=${airport}&format=json`;
+      // const url = `https://applications.icao.int/dataservices/api/doc7910?api_key=45f14a4b-fae7-4fa6-aa11-17ed20b6b96c&airports=${airport}&format=json`;
     // const url='https://dummy.restapiexample.com/api/v1/employees';
       const response = await fetch(url);
     //   if (0) {
